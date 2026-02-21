@@ -178,7 +178,7 @@ const Footer = ({ data, socialLinksData }) => {
             <p>
               Developed with ❤️ by{" "}
               <Link
-                to="http://admin.ilabs360.com/"
+                to="http://mastermind.ilabs360.com/"
                 className="text-primary hover:underline font-medium"
                 target="_blank"
               >

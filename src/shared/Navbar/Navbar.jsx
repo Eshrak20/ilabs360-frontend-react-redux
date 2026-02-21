@@ -84,9 +84,9 @@ const Navbar = ({ socialLinks = [], settingData }) => {
         initial={{ y: -40 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed top-0 left-0 w-full z-[100] bg-gradient-to-r from-primary/10 via-background to-primary/10 backdrop-blur-sm border-b border-primary/10"
+        className="fixed top-0 left-0 w-full z-50 bg-linear-to-r from-primary/10 via-background to-primary/10 backdrop-blur-sm border-b border-primary/10"
       >
-        <div className="max-w-[1800px] mx-auto px-6 py-2">
+        <div className="max-w-450 mx-auto px-6 py-2">
           <div className="flex items-center justify-between text-sm">
             {/* Left - Contact Info with Animation */}
             <div className="flex items-center gap-6">

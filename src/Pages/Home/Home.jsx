@@ -17,6 +17,8 @@ import TestimonialSection from "./HomeTestimonial/TestimonialSection";
 import HomeBlogs from "../Blogs/BlogsCard/BlogsCard";
 import { useGetBlogsQuery } from "@/redux/api/blogApi";
 import BlogsCard from "../Blogs/BlogsCard/BlogsCard";
+import HomeBlogsSkeleton from "@/components/skeletons/HomeBlogsSkeleton";
+import HomeTeamSkeleton from "@/components/skeletons/HomeTeamSkeleton";
 
 const Home = () => {
   const { data: homeSectionData, isLoading: homeSectionLoading } =
@@ -70,7 +72,7 @@ const Home = () => {
       {projectsLoading || !projectsData?.data ? (
         <HomeProjectsSkeleton />
       ) : (
-        
+
         <ProjectsCard projects={projectsData.data} />
       )}
 
@@ -79,20 +81,20 @@ const Home = () => {
         <HomeTestimonialSkeleton />
       ) : (
         <>
-        <TestimonialSection testimonial={testimonialData.data} />
-        <HomeClients testimonial={testimonialData.data}/>
+          <TestimonialSection testimonial={testimonialData.data} />
+          <HomeClients testimonial={testimonialData.data} />
         </>
       )}
-       {profilesLoading || !profilesData?.data ? (
-        <HomeProjectsSkeleton />
+      {profilesLoading || !profilesData?.data ? (
+        <HomeTeamSkeleton />
       ) : (
-        
+
         <TeamLeaders profiles={profilesData.data} />
       )}
-       {blogLoading || !blogsData?.data ? (
-        <HomeProjectsSkeleton />
+      {blogLoading || !blogsData?.data ? (
+        <HomeBlogsSkeleton />
       ) : (
-        
+
         <BlogsCard blogs={blogsData.data} />
       )}
     </div>

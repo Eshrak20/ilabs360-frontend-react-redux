@@ -23,7 +23,7 @@ const FilterSection = ({ filters, setFilters, categories = [] }) => {
             >
               <option value="">All</option>
               <option value="published">Published</option>
-              <option value="draft">Draft</option>
+              {/* <option value="draft">Draft</option> */}
             </select>
           </div>
 
@@ -60,8 +60,8 @@ const FilterSection = ({ filters, setFilters, categories = [] }) => {
                 setFilters({ ...filters, sort: e.target.value })
               }
             >
-              <option value="latest">Latest Projects</option>
-              <option value="oldest">Oldest Projects</option>
+              <option value="latest">Latest Blog</option>
+              <option value="oldest">Oldest Blog</option>
             </select>
           </div>
 
